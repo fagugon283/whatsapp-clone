@@ -3,11 +3,6 @@ import Sidebar from "./components/Sidebar";
 import ChatWindow from "./components/ChatWindow";
 import "./App.css";
 
-// VARIABLES GLOBALES
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
-const apptitle = import.meta.env.VITE_TITLE;
-
 function App() {
   // Estado para almacenar el chat seleccionado
   const [selectedChat, setSelectedChat] = useState(null);

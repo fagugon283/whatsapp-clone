@@ -1,5 +1,5 @@
 import ChatList from "./ChatList";
-
+/* eslint-disable react/prop-types */
 function Sidebar({ onSelectChat, isOpen, onClose }) {
   return (
     <div className={`sidebar ${isOpen ? "open" : ""}`}>

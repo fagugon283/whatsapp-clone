@@ -6,6 +6,11 @@ import Fab from "@mui/material/Fab";
 import Avatar from "@mui/material/Avatar";
 import { useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
+/* eslint-disable react/prop-types */
+// VARIABLES GLOBALES
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
+const apptitle = import.meta.env.VITE_TITLE;
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 

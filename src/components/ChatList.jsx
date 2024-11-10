@@ -4,7 +4,7 @@ import Avatar from "@mui/material/Avatar";
 /* mapea los chats que está en los mocks/chats.js y los muestra en la lista de chats  
 debes pensar donde hacer el fetch, si pasarlo como props... pero no lo dejes como variable global
 */
-
+/* eslint-disable react/prop-types */
 function ChatList({ onSelectChat }) {
   return (
     <div className="chat-list">
