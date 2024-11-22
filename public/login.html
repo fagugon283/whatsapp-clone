@@ -37,7 +37,7 @@
               // Login exitoso, guardar tokens y redirigir
               sessionStorage.setItem("access_token", response.access_token);
               sessionStorage.setItem("refresh_token", response.refresh_token);
-              window.location.href = "index2.html";
+              window.location.href = "/";
             } else {
               // Si no hay token, mostrar mensaje de error
               errorMessageElement.textContent =
