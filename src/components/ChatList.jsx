@@ -1,11 +1,25 @@
-import chats from "../mocks/chats";
+//import chats from "../mocks/chats";
 import Avatar from "@mui/material/Avatar";
-
+import { useEffect, useState } from "react";
 /* mapea los chats que está en los mocks/chats.js y los muestra en la lista de chats  
 debes pensar donde hacer el fetch, si pasarlo como props... pero no lo dejes como variable global
 */
 /* eslint-disable react/prop-types */
 function ChatList({ onSelectChat }) {
+  const [chats, setChats] = useState([]);
+  useEffect(() => {
+    const options = {
+      method: "GET",
+      headers: { "User-Agent": "insomnia/10.1.0" },
+    };
+
+    fetch(
+      "https://xsffmkqgakjtfqhxqxyc.supabase.co/rest/v1/usuarios?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhzZmZta3FnYWtqdGZxaHhxeHljIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjg0MDI4NTcsImV4cCI6MjA0Mzk3ODg1N30.t9RppVkCE2PuaHgLjjOoh5eg1wW_ExtLGnRjYsdf_VA&select=*",
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => setChats(response));
+  }, []);
   return (
     <div className="chat-list">
       {chats.map((chat) => (

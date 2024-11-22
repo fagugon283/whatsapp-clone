@@ -2,7 +2,9 @@ import { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import ChatWindow from "./components/ChatWindow";
 import "./App.css";
-
+export function suma(a, b) {
+  return a + b;
+}
 function App() {
   // Estado para almacenar el chat seleccionado
   const [selectedChat, setSelectedChat] = useState(null);
